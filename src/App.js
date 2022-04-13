@@ -5,7 +5,6 @@ import About from "./Component/Pages/About";
 import Home from "./Component/Pages/Home";
 import Login from "./Component/Pages/Login";
 import Register from "./Component/Pages/Register";
-import Services from "./Component/Pages/Services";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path="/services" element={<Services/>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
