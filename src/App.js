@@ -5,16 +5,18 @@ import About from "./Component/Pages/About";
 import Home from "./Component/Pages/Home";
 import Login from "./Component/Pages/Login";
 import Register from "./Component/Pages/Register";
+import ServiceDetail from "./Component/Pages/ServiceDetail";
 
 function App() {
   return (
     <div className="px-4 md:px-16">
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/login" element={<Login/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="/register" element={<Register/>}></Route>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path='/service/:serviceId' element={<ServiceDetail/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
       <Footer></Footer>
     </div>
