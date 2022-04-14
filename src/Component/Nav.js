@@ -16,7 +16,10 @@ const Nav = () => {
                 <CustomLink  className="mx-2 md:mx-5" to="/about">About</CustomLink>
                 {
                     user ? 
-                    <button onClick={handleSignOut} className="font-bold text-red-500">Sign Out</button>
+                    <div className='flex'>
+                        <p className='mx-2'>{user.displayName ? user.displayName : user.email}</p>
+                        <button onClick={handleSignOut} className="font-bold mx-2 text-red-500">Sign Out</button>
+                    </div>
                     :
                     <div>
                     <CustomLink  className="mx-2 md:mx-5" to="/login">Login</CustomLink>
