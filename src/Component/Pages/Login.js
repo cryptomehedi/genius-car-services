@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Spinner from '../Spiner';
 import SocialLogin from './SocialLogin';
 
 const Login = () => {
@@ -51,10 +52,10 @@ const Login = () => {
         </form>
         <div className='text-center font-semibold'>
                     {
-                        loading && <p className='text-yellow-400'>Your Login Is Processing...</p>
+                        loading && <Spinner text= 'Your Login Is Processing...' />
                     }
                     {
-                        sending && <p className='text-yellow-400'>Your Forget Password Email Is Sending...</p>
+                        sending && <Spinner text = 'Your Forget Password Email Is Sending...'/>
                     }
                 </div>
         <p className='text-center'>New in here? Please <span className="text-yellow-400 cursor-pointer" onClick={navigateRegister} >Register</span></p>
